@@ -66,3 +66,9 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+### 'Credits
+The following tutorial was used for the redux and styled component part of the app: 
+React, TypeScript, Redux, StyledComponents: Build Sudoku App
+
+https://www.udemy.com/course/react2020/learn/lecture/17612520
