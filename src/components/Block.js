@@ -49,7 +49,7 @@ const Block = ({ rowIndex, colIndex }) => {
   }, [enter, esc]);
   return isInputActive?<Input type='number' value={inputValue}
 
-  onChange={(e) => setInputValue(parseInt(e.target.value))}/>:<BlockContainer chosen = {selected} onClick= {()=>isEditable?setIsInputActive(!isInputActive): null}>{val===0 ? "":val}</BlockContainer>
+  onChange={(e) => setInputValue(parseInt(e.target.value))}/>:<BlockContainer chosen = {selected} isPuzzle ={!isEditable} onClick= {()=>isEditable?setIsInputActive(!isInputActive): null}>{val===0 ? "":val}</BlockContainer>
 }
 
 export default Block
