@@ -1,13 +1,15 @@
-import styled, { css } from 'styled-components'
+import styled, { css } from "styled-components";
 
 const Button = styled.button`
-  ${({ theme }) => css`
+  ${({ theme, colorDisabled }) => css`
     align-items: center;
-    background-color: ${theme.colors.black};
+    background-color: ${
+      colorDisabled ? colorDisabled.background : theme.colors.black
+    };
     border: 2px solid ${theme.colors.black};
     border-radius: 4px;
-    color: ${theme.colors.white};
-    cursor: pointer;
+    color: ${colorDisabled ? colorDisabled.fontColor : theme.colors.white};
+    cursor: ${colorDisabled ? "none" : "pointer"};
     display: flex;
     flex; 1;
     font-size: 16px;
@@ -29,5 +31,5 @@ const Button = styled.button`
       opacity: 0.6;
     }
   `}
-`
+`;
 export default Button;
