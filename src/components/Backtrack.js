@@ -57,7 +57,10 @@ const Backtrack = () => {
           listCount > 0 ? { background: "#D3D3D3", fontColor: "#808080" } : null
         }
         onClick={() => {
+<<<<<<< HEAD
           setStatus("Solve");
+=======
+>>>>>>> 295564cff99b3e7c1dad5ec40fb46a3a23abf9a6
           createNewGrid(grid, dispatch);
         }}
       >

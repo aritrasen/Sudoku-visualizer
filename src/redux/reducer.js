@@ -35,7 +35,11 @@ function reducer(state = {}, action) {
       } else if (
         checkCol(gridNew, col, val) &&
         checkRow(gridNew, row, val) &&
+<<<<<<< HEAD
         checkSquare(gridNew, row, col, val)&&0<=val&&val<=9
+=======
+        checkSquare(gridNew, row, col, val)
+>>>>>>> 295564cff99b3e7c1dad5ec40fb46a3a23abf9a6
       ) {
         gridNew[row][col] = val;
         //console.log("Action", solGrid[row][col]);
