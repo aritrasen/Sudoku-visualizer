@@ -9,6 +9,9 @@ import {
 } from "../redux/action";
 
 import Button from "../styles/Button";
+import Row from "../styles/Row";
+import DummyButton from "../styles/DummyButton";
+import SideMessage from "../styles/SideMessage";
 
 function myListDispatch(grid, dispatch) {
   const delay = 6;
@@ -27,6 +30,7 @@ function createNewGrid(grid, dispatch) {
 
 const Backtrack = () => {
   const [status, setStatus] = useState("Solve");
+  const [guidelineFlag, setGuidelineFlag] = useState(false);
   const dispatch = useDispatch();
   const grid = useSelector((state) =>
     state.grid
@@ -63,7 +67,39 @@ const Backtrack = () => {
       >
         New Game
       </Button>
-      <Button>Steps Remaining: {listCount ? listCount : "Unknown"}</Button>
+      <Row>
+        <DummyButton>
+          Steps Remain: {listCount ? listCount : "Unknown"}
+        </DummyButton>
+        <DummyButton onClick={() => setGuidelineFlag(!guidelineFlag)}>
+          {!guidelineFlag ? "Show Guidelines" : "Hide Guidlines"}
+        </DummyButton>
+      </Row>
+      {guidelineFlag && (
+        <Row>
+          <SideMessage>
+            <strong>Solve button</strong>{" "}
+            <p>
+              This will start the game. You cannot interrupt the game in the
+              middle. You can start a new game only after the current game is
+              finished.
+            </p>
+            <strong>New Game</strong>{" "}
+            <p>
+              Every time you click "New Game" button, a new setting of numbers
+              will show to play with. You can then click "Solve" button to start
+              the game. The button "New Game" will be disabled if a game is
+              already in progress. You can also click on a block to insert numbers 
+              from your keyboard and play the game. Press ESC to undo.
+            </p>
+            <strong>Step Remain</strong>{" "}
+            <p>
+              It is here to show the steps remaining before your current game
+              finishes.
+            </p>
+          </SideMessage>
+        </Row>
+      )}
     </React.Fragment>
   );
 };

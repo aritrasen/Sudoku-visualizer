@@ -1,14 +1,16 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState,useEffect,useRef} from 'react'
 import BlockContainer from '../styles/BlockContainer'
 import Input from '../styles/InputContainer'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import {changeGrid} from '../redux/action'
 import useKeypress from '../hooks/useKeypress'
+import useOnClickOutside from '../hooks/useOnClickOutside'
 
 const Block = ({ rowIndex, colIndex }) => {
   const [isInputActive, setIsInputActive] = useState(false)
   const [inputValue, setInputValue] = useState("")
+  const ref = useRef()
   const val = useSelector(state=> state.grid? state.grid[rowIndex][colIndex]:0)
   const solVal = useSelector(state=> state.solGrid? state.solGrid[rowIndex][colIndex]:1)
   const activeRow = useSelector(state => state.activeRow)
@@ -20,6 +22,7 @@ const Block = ({ rowIndex, colIndex }) => {
   const dispatch = useDispatch()
   const enter = useKeypress('Enter');
   const esc = useKeypress('Escape');
+  useOnClickOutside(ref, () => setIsInputActive(false))
   useEffect(() => {
 
     if (isInputActive) {

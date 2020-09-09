@@ -1,74 +1,82 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
 
-## Available Scripts
+- [About the Project](#about-the-project)
+  - [Built With](#built-with)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [How to Play](#how-to-play)
 
-In the project directory, you can run:
+<!-- ABOUT THE PROJECT -->
 
-### `yarn start`
+## About The Project
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This is game of [Sudoko](https://en.wikipedia.org/wiki/Sudoku)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Built With
 
-### `yarn test`
+Major frameworks used to built this project:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [React](https://reactjs.org/)
+- [Redux](https://redux.js.org/)
 
-### `yarn build`
+<!-- GETTING STARTED -->
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Prerequisites & Steps for setting up and running your project locally
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
 
-### `yarn eject`
+The prerequisites for this project is :
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- npm
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```sh
+npm install npm@latest -g
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Installation Steps
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. Clone the repo
 
-## Learn More
+```sh
+git clone https://github.com/aritrasen/Sudoku-visualizer
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Install NPM packages
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```sh
+npm install
+```
 
-### Code Splitting
+3. Run the project
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+```sh
+npm start
+```
 
-### Analyzing the Bundle Size
+## How to Play
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+1. To start playing the game, click on the "Solve" button.
 
-### Making a Progressive Web App
+   - This will start the game.
+   - You cannot interrupt the game in the middle.
+   - You can start a new game only after the current game is finished.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+2. To play the game with a different setting of numbers, click on ""New Game" button.
 
-### Advanced Configuration
+   - Every time you click "New Game" button, a new setting of numbers will show to play with.
+   - You can then click "Solve" button to start the game.
+   - The button "New Game" will be disabled if a game is already in progress.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+3. Steps Remaining is not a button.
+   - It is here to show the steps remaining before your current game finishes.
 
-### Deployment
+Enjoy :smile
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+*Credits*
 
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-
-### 'Credits
-The following tutorial was used for the redux and styled component part of the app: 
-React, TypeScript, Redux, StyledComponents: Build Sudoku App
+The following tutorial was used for the redux and styled component part of the app: React, TypeScript, Redux, StyledComponents: Build Sudoku App
 
 https://www.udemy.com/course/react2020/learn/lecture/17612520
